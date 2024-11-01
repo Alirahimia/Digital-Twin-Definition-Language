@@ -1,0 +1,135 @@
+{
+   "@id":"dtmi:com:idtbook:wt:ConstructionSite;1",
+   "@type":"Interface",
+   "@context":[
+      "dtmi:dtdl:context;3"
+   ],
+   "displayName":"ConstructionSite",
+   "description":"WhereCarbonEmissionIsMonitoredandPredicted",
+   "contents":[
+    {
+      "@type": "Property",
+      "name": "ConstructionSite1",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "GPSLongitude",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "GPSLatitude",
+      "schema": "double"
+    }
+   ]
+}
+
+
+
+{
+  "@id"     :"dtmi:com:idtbook:wt:Building;1",
+  "@type"   :"Interface",
+  "@context":[
+     "dtmi:dtdl:context;3"
+  ],
+  "displayName":"Building 1",
+  "description":"-",
+ "contents"    : [
+  {
+    "@type" : "Property",
+    "name"  : "totalCarbonEmissions",
+    "schema": "double"
+  },
+  {
+    "@type" : "Property",
+    "name"  : "ConstructionPhase",
+    "schema": "String",
+    "enum"  : ["planning", "construction", "operation"]
+  },
+  {
+    "@type" : "Telemetry",
+    "name"  : "occupancyLevel",
+    "schema": "Integer",
+    "unit"  : "%"
+  },
+  {
+   "@type" : "Telemetry",
+   "name"  : "energyConsumption",
+   "schema": "double",
+   "unit"  : "kWh"
+ }, {
+  "@type": "Relationship",
+   "name": "MemberOf",
+   "displayName": "MemberOf",
+   "minMultiplicity": 0,
+   "maxMultiplicity": 1,
+   "target": "dtmi:com:idtbook:wt:ConstructionSite;1"
+ }
+
+
+ ]
+   
+  }
+
+
+{
+  "@id"     :"dtmi:com:idtbook:wt:ConstructionMaterial;1",
+  "@type"   :"Interface",
+  "@context":[
+     "dtmi:dtdl:context;3"
+  ],
+  "displayName":"Construction Material 1",
+  "description":"-",
+ "contents"    : [
+  {
+    "@type" : "Property",
+    "name"  : "embodiedCarbon",
+    "schema": "double"
+  },
+  {
+   "@type" : "Property",
+   "name"  : "weight",
+   "schema": "double"
+ }, {
+  "@type": "Relationship",
+   "name": "PartOf",
+   "displayName": "PartOf",
+   "minMultiplicity": 0,
+   "maxMultiplicity": 1,
+   "target": "dtmi:com:idtbook:wt:Building;1"
+ }
+ ]
+}
+
+
+
+{
+  "@id"     :"dtmi:com:idtbook:wt:ConstructionEquipment;1",
+  "@type"   :"Interface",
+  "@context":[
+     "dtmi:dtdl:context;3"
+  ],
+  "displayName":"Construction Equipment 1",
+  "description":"-",
+ "contents"    : [
+  {
+    "@type" : "Property",
+    "name"  : "operatingHours",
+    "schema": "integer"
+  },
+  {
+   "@type" : "Telemetry",
+   "name"  : "fuelConsumption",
+   "schema": "double",
+   "unit"  : "L/h"
+ }, {
+  "@type": "Relationship",
+   "name": "MemberOf",
+   "displayName": "MemberOf",
+   "minMultiplicity": 0,
+   "maxMultiplicity": 1,
+   "target": "dtmi:com:idtbook:wt:ConstructionSite;1"
+ }
+ ]
+}
