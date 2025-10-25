@@ -1,9 +1,6 @@
 
-Absolutely — here’s a polished, professional README draft tailored for your GitHub project Digital-Twin-Definition-Language. It’s structured to highlight your technical depth, research context, and reproducibility, making it ideal for PhD applications and portfolio use:
 
----
-
-🧠 Digital Twin Definition Language (DTDL) – Research Prototype
+Digital Twin Definition Language (DTDL) – Research Prototype
 
 This repository contains a prototype implementation of a Digital Twin Definition Language (DTDL) designed to formalize and simulate construction-related entities and behaviors. It supports the creation of structured, machine-readable definitions for digital twins in the built environment, enabling integration with BIM, IoT, and simulation workflows.
 
