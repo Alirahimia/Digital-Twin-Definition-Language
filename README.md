@@ -81,24 +81,12 @@ Digital-Twin-Definition-Language/
 
 ---
 
-📽️ Demo Video
-
-A short demo video showing point cloud reconstruction, DTDL schema generation, and Revit integration is available here.
-
----
-
 📚 Publications & Research Context
 
 This project supports ongoing research in:
 - Digital twins for carbon baseline setting (Cambridge collaboration)  
 - Communication quality prediction in construction (published in Automation in Construction)  
 - IoT adoption barriers and semantic modeling (ASCE JCEM)
-
----
-
-📄 License
-
-This project is released under the MIT License. See LICENSE for details.
 
 ---
 
@@ -110,7 +98,3 @@ For academic collaboration or questions, feel free to reach out:
 - Email: alirahimian21@yahoo.com  
 - LinkedIn: Ali Rahimian  
 - GitHub: Alirahimia
-
----
-
-Would you like help writing the short demo script or creating a reproducibility checklist for reviewers? I can help with that next.
